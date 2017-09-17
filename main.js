@@ -1,10 +1,10 @@
 // to make sure elements are loaded before
-$document.ready( function(){ 
-	var pic = $('#img');
+$(document).ready( function(){ 
+	console.log('in ready');
 	var picBtn = $('#change-pic-btn');
 
 	// Event Handler to change the src of image
-	picBtn.click(function(){
-		pic.src = 'https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg';
+	picBtn.on('click', function(){
+		$('#img').attr('src', 'cat.png');
 	});
 });
